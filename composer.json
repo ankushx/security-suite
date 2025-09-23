@@ -2,7 +2,7 @@
     "name": "miniorange_inc/security-suite",
     "description": "Complete Security Suite Bundle for Magento 2",
     "type": "magento2-module",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "require": {
         "php": "~7.4.0||~8.1.0||~8.4.0",
         "miniorange_inc/miniorange-oauth-sso": "*",
