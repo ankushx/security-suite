@@ -20,9 +20,10 @@ class MenuBuilderPlugin
 
         // Hide MiniOrange_TwoFA menu items but keep functionality
         $menusToHide = [
-            'MiniOrange_TwoFA::TwoFA',              // Main menu
-            'MiniOrange_SSO::SSO',
-            'MiniOrange_AzureSSO::OAuth'
+            'MiniOrange_TwoFA::TwoFA',              
+            'MiniOrange_BruteForce::BruteForce',
+            'MiniOrange_AdminActivity::AdminActivity',
+            'MiniOrange_RateLimiting::RateLimiting'
         ];
 
         foreach ($menusToHide as $menuId) {
