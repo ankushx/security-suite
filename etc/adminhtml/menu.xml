@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/menu.xsd">
+    <menu>
+        <add id="MiniOrange_SecuritySuite::security"
+             title="Security Suite"
+             module="MiniOrange_SecuritySuite"
+             sortOrder="50"
+             resource="MiniOrange_SecuritySuite::security"/>
+
+        <!-- Use controller for dynamic URL generation -->
+        <add id="MiniOrange_SecuritySuite::twofactor"
+             title="Two-Factor Authentication"
+             module="MiniOrange_SecuritySuite"
+             sortOrder="10"
+             parent="MiniOrange_SecuritySuite::security"
+             action="securitysuite/redirect/twofa"
+             resource="MiniOrange_SecuritySuite::twofactor"/>
+
+
+        <add id="MiniOrange_SecuritySuite::bruteforce"
+             title="Brute Force Protection"
+             module="MiniOrange_SecuritySuite"
+             sortOrder="20"
+             parent="MiniOrange_SecuritySuite::security"
+             action="adminhtml/system_config/edit/section/securitysuite_bruteforce"
+             resource="MiniOrange_SecuritySuite::bruteforce"/>
+
+        <add id="MiniOrange_SecuritySuite::ratelimiting"
+             title="IP Rate Limiting"
+             module="MiniOrange_SecuritySuite"
+             sortOrder="30"
+             parent="MiniOrange_SecuritySuite::security"
+             action="adminhtml/system_config/edit/section/securitysuite_ratelimiting"
+             resource="MiniOrange_SecuritySuite::ratelimiting"/>
+
+        <add id="MiniOrange_SecuritySuite::adminactivity"
+             title="Admin Activity Logs"
+             module="MiniOrange_SecuritySuite"
+             sortOrder="40"
+             parent="MiniOrange_SecuritySuite::security"
+             action="securitysuite/adminactivity/index"
+             resource="MiniOrange_SecuritySuite::adminactivity"/>
+    </menu>
+</config>
