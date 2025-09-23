@@ -5,10 +5,10 @@
     "version": "1.0.0",
     "require": {
         "php": "~7.4.0||~8.1.0||~8.4.0",
-        "miniorange_inc/miniorange-oauth-sso": "^1.0",
-        "miniorange_inc/miniorange_azure_ad_entra_id_sso": "^1.0",
-        "miniorange_inc/miniorange-2fa": "^1.0",
-        "miniorange_inc/miniorange-magento-sso": "^1.0"
+        "miniorange_inc/miniorange-oauth-sso": "*",
+        "miniorange_inc/miniorange_azure_ad_entra_id_sso": "*",
+        "miniorange_inc/miniorange-2fa": "*",
+        "miniorange_inc/miniorange-magento-sso": "*"
     },
     "autoload": {
         "files": [
