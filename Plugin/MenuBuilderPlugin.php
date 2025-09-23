@@ -22,6 +22,7 @@ class MenuBuilderPlugin
         $menusToHide = [
             'MiniOrange_TwoFA::TwoFA',              // Main menu
             'MiniOrange_SSO::SSO',
+            'MiniOrange_AzureSSO::OAuth'
         ];
 
         foreach ($menusToHide as $menuId) {
