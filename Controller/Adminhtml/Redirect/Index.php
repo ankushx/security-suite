@@ -30,9 +30,37 @@ class Index extends \Magento\Backend\App\Action
                 return $this->redirectToRateLimiting();
             case 'adminactivity':
                 return $this->redirectToAdminActivity();
+            case 'sso':
+                return $this->redirectToSSO();
+            case 'azure-sso':
+                return $this->redirectToAzureSSO();
             default:
                 $this->messageManager->addError(__('Invalid module specified.'));
                 return $this->_redirect('adminhtml/dashboard/index');
+        }
+    }
+
+    protected function redirectToSSO()
+    {
+        // Check if MiniOrange OAuth SSO module is installed and enabled
+        if ($this->moduleManager->isEnabled('MiniOrange_SSO')) {
+            $miniorangeUrl = $this->backendUrl->getUrl('mooauth/account/index');
+            return $this->_redirect($miniorangeUrl);
+        } else {
+            $this->messageManager->addError(__('SSO module is not installed.'));
+            return $this->_redirect('adminhtml/dashboard/index');
+        }
+    }
+
+    protected function redirectToAzureSSO()
+    {
+        // Check if MiniOrange Azure SSO module is installed and enabled
+        if ($this->moduleManager->isEnabled('MiniOrange_AzureSSO')) {
+            $miniorangeUrl = $this->backendUrl->getUrl('mooauth/account/index');
+            return $this->_redirect($miniorangeUrl);
+        } else {
+            $this->messageManager->addError(__('Azure SSO module is not installed.'));
+            return $this->_redirect('adminhtml/dashboard/index');
         }
     }
 

@@ -17,6 +17,10 @@
                         <resource id="MiniOrange_SecuritySuite::ratelimiting" title="IP Rate Limiting" sortOrder="30"/>
                         <!-- Admin Activity Logs ACL definition -->
                         <resource id="MiniOrange_SecuritySuite::adminactivity" title="Admin Activity Logs" sortOrder="40"/>
+                        <!-- SSO ACL definition -->
+                        <resource id="MiniOrange_SecuritySuite::sso" title="SSO" sortOrder="50"/>
+                        <!-- Azure SSO ACL definition -->
+                        <resource id="MiniOrange_SecuritySuite::azure-sso" title="Azure SSO" sortOrder="60"/>
                         <!-- Account ACL definition -->
                         <resource id="MiniOrange_SecuritySuite::Account" title="Account" sortOrder="50"/>
                         <!-- Upgrade ACL definition -->

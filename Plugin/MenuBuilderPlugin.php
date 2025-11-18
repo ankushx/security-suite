@@ -23,7 +23,9 @@ class MenuBuilderPlugin
             'MiniOrange_TwoFA::TwoFA',              
             'MiniOrange_BruteForce::BruteForce',
             'MiniOrange_AdminActivity::AdminActivity',
-            'MiniOrange_RateLimiting::RateLimiting'
+            'MiniOrange_RateLimiting::RateLimiting',
+            'MiniOrange_SSO::SSO',
+            'MiniOrange_AzureSSO::OAuth',
         ];
 
         foreach ($menusToHide as $menuId) {
