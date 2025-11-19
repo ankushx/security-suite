@@ -29,7 +29,7 @@
     },
     "require": {
         "php": "~7|~8",
-        "miniorange_inc/miniorange-azure-sso": "*",
+        "miniorange_inc/miniorange_azure_ad_entra_id_sso": "*",
         "miniorange_inc/firebase_authentication": "*",
         "miniorange_inc/miniorange-social-login": "*"
     }
